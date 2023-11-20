@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
-  get 'home/LogInMenu'
   root 'home#index'
-    # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
+  get 'home/LogInMenu', to: 'home#LogInMenu' # Assuming 'log_in_menu' is the action/method name
 
-  # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
-  # Can be used by load balancers and uptime monitors to verify that the app is live.
-  get "up" => "rails/health#show", as: :rails_health_check
+  # Define your other application routes here
 
-  # Defines the root path route ("/")
+  # Route to reveal health status at /up: returns 200 if the app boots with no exceptions, otherwise 500.
+  # Used by load balancers and uptime monitors to verify app availability.
+  get 'up', to: 'rails/health#show', as: :rails_health_check
+
+  # Example of a root path route ("/")
   # root "posts#index"
 end
