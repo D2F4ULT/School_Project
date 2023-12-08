@@ -8,6 +8,7 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.enable_reloading = true
 
+
   # Do not eager load code on boot.
   config.eager_load = false
 
@@ -29,6 +30,7 @@ Rails.application.configure do
     }
   else
     config.action_controller.perform_caching = false
+    
 
     config.cache_store = :null_store
   end
@@ -61,6 +63,8 @@ Rails.application.configure do
 
   # Suppress logger output for asset requests.
   config.assets.quiet = true
+
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   # Raises error for missing translations.
   # config.i18n.raise_on_missing_translations = true

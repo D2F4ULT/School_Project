@@ -100,6 +100,15 @@ GEM
     debug (1.8.0)
       irb (>= 1.5.0)
       reline (>= 0.3.1)
+    devise (4.9.3)
+      bcrypt (~> 3.0)
+      orm_adapter (~> 0.1)
+      railties (>= 4.1.0)
+      responders
+      warden (~> 1.2.3)
+    devise-bootstrap5 (0.1.3)
+    devise-i18n (1.12.0)
+      devise (>= 4.9.0)
     drb (2.2.0)
       ruby2_keywords
     erubi (1.12.0)
@@ -165,6 +174,7 @@ GEM
       rack (>= 1.2, < 4)
       snaky_hash (~> 2.0)
       version_gem (~> 1.1)
+    orm_adapter (0.5.0)
     psych (5.1.1.1)
       stringio
     public_suffix (5.0.3)
@@ -214,6 +224,9 @@ GEM
     regexp_parser (2.8.2)
     reline (0.4.0)
       io-console (~> 0.5)
+    responders (3.1.1)
+      actionpack (>= 5.2)
+      railties (>= 5.2)
     rexml (3.2.6)
     ruby2_keywords (0.0.5)
     rubyzip (2.3.2)
@@ -248,6 +261,8 @@ GEM
     tzinfo (2.0.6)
       concurrent-ruby (~> 1.0)
     version_gem (1.1.3)
+    warden (1.2.9)
+      rack (>= 2.0.9)
     web-console (4.2.1)
       actionview (>= 6.0.0)
       activemodel (>= 6.0.0)
@@ -269,6 +284,9 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  devise (~> 4.9)
+  devise-bootstrap5
+  devise-i18n
   importmap-rails
   jbuilder
   puma (>= 5.0)
